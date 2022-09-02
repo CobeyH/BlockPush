@@ -24,8 +24,6 @@ public class FallDetector : MonoBehaviour
     // When the player falls behind too much, destroy them
     void OnBecameInvisible()
     {
-        Debug.Log("Off Screen");
-
         gc.GameOver();
     }
 }
