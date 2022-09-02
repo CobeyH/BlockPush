@@ -7,6 +7,23 @@ public class GameController : MonoBehaviour
 {
     bool isGameOver = false;
     public GameObject gameOverMenu;
+    public GameObject pauseMenu;
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            MenuController menuController = pauseMenu.GetComponent<MenuController>();
+            bool isGamePaused = menuController.MenuUI.activeSelf;
+            if (isGamePaused)
+            {
+                menuController.HideMenu();
+            }
+            else
+            {
+                menuController.ShowMenu();
+            }
+        }
+    }
     public void GameOver()
     {
         if (!isGameOver)
