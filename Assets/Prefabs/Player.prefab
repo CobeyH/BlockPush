@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4073859293752930504}
   - component: {fileID: 4073859293752930509}
   - component: {fileID: -6740401518408820608}
+  - component: {fileID: 3976171433334210602}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -130,6 +131,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drivingForce: 10
   steeringForce: 5
+  movementControls:
+    m_Name: Movement Controls
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 5231b3b3-cc39-4c58-a322-6c0f6bbef262
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: Movement
+      m_Id: 462906e5-f1d6-4b7b-bfb6-64f74c5a3085
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement Controls
+      m_Flags: 4
+    - m_Name: up
+      m_Id: 35ec9312-500a-457b-adca-5053bba21ec1
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement Controls
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 7e06fb32-9c6d-4569-9536-df94ed8d2bfd
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement Controls
+      m_Flags: 8
+    - m_Name: left
+      m_Id: e4499d48-0edf-44e2-a1fc-f945eb8ea883
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement Controls
+      m_Flags: 8
+    - m_Name: right
+      m_Id: a556e17f-23fd-490e-a593-1e2138d95f67
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement Controls
+      m_Flags: 8
+    m_Flags: 0
 --- !u!114 &-6740401518408820608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,4 +192,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a2856bf21ac02ce89ad997e471700f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 4073859293752930507}
+--- !u!114 &3976171433334210602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4073859293752930507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfe0d88adc3ad563b91d4aa275fae65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
