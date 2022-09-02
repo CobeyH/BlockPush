@@ -35,6 +35,7 @@ public class GameController : MonoBehaviour
 
     public void RestartLevel()
     {
+        isGameOver = false;
         int levelIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(levelIndex);
     }

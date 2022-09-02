@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody rigidBody;
     Vector2 moveDirection = Vector2.zero;
 
+
     void Start()
     {
         rigidBody = gameObject.GetComponent<Rigidbody>();
