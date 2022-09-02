@@ -1,12 +1,23 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
     public float drivingForce = 1000f;
     public float steeringForce = 500f;
+    public InputAction movementControls;
     Rigidbody rigidBody;
     Vector2 moveDirection = Vector2.zero;
 
+    void OnEnable()
+    {
+        movementControls.Enable();
+    }
+
+    void OnDisable()
+    {
+        movementControls.Disable();
+    }
 
     void Start()
     {
@@ -15,11 +26,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // I could use Unity's input system 1.02. However in this game the actions the player
-        // can take are very limited. Thus, this solution is simpler.
-        float moveX = Input.GetAxis("Horizontal");
-        float moveY = Input.GetAxis("Vertical");
-        moveDirection = new Vector2(moveX, moveY).normalized;
+        // I used Unity's version 1.02 player input because it's easier to
+        // support any keyboard layout. Since I use DVORAK keybord layout I didn't
+        // want to bind controls to specific keys.
+        moveDirection = movementControls.ReadValue<Vector2>();
     }
 
     void FixedUpdate()
