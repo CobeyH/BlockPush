@@ -9,6 +9,7 @@ public class ColorChanging : MonoBehaviour
     Color baseColor;
     Rigidbody rb;
     bool baseKinematic;
+    bool powerModeSwitched = false;
     void Start()
     {
         rend = gameObject.GetComponent<Renderer>();
@@ -23,10 +24,13 @@ public class ColorChanging : MonoBehaviour
         {
             rend.material.color = Powerup.LerpColor(baseColor);
             rb.isKinematic = false;
+            powerModeSwitched = true;
         }
-        else
+        // Make sure that the kinematic property only gets set once to avoid issues with neutral objects.
+        else if (powerModeSwitched)
         {
             rb.isKinematic = baseKinematic;
+            powerModeSwitched = false;
         }
     }
 }
