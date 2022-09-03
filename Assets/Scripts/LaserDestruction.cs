@@ -23,7 +23,11 @@ public class LaserDestruction : MonoBehaviour
     // When the laser hits an object, it destroys that object.
     void OnTriggerEnter(Collider collider)
     {
+        // Destroy the object. If it has a death effect then play it.
         DeathEffect deathEffect = collider.gameObject.GetComponent<DeathEffect>();
-        deathEffect.DestroyWithEffect();
+        if (deathEffect != null)
+        {
+            deathEffect.DestroyWithEffect();
+        }
     }
 }
