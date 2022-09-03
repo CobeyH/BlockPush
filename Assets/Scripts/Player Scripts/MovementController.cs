@@ -3,9 +3,14 @@ using UnityEngine.InputSystem;
 
 public class MovementController : MonoBehaviour
 {
-    public float drivingForce = 1000f;
-    public float steeringForce = 500f;
-    public InputAction movementControls;
+    [SerializeField]
+    float drivingForce = 1000f;
+
+    [SerializeField]
+    float steeringForce = 500f;
+
+    [SerializeField]
+    InputAction movementControls;
     Rigidbody rigidBody;
     Vector2 moveDirection = Vector2.zero;
 

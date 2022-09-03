@@ -16,6 +16,11 @@ public class GameController : MonoBehaviour
     }
     void Update()
     {
+        HandlePauseMenu();
+    }
+
+    void HandlePauseMenu()
+    {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             MenuController menuController = pauseMenu.GetComponent<MenuController>();

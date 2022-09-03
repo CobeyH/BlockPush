@@ -6,9 +6,9 @@ public class PowerupDisplay : MonoBehaviour
     [SerializeField]
     TMP_Text displayText;
     Color baseColor;
-    // Start is called before the first frame update
     void Start()
     {
+        // The basecolor will be used to restore the color if it changed.
         baseColor = displayText.color;
     }
 
@@ -20,6 +20,7 @@ public class PowerupDisplay : MonoBehaviour
         {
             displayText.enabled = !displayText.enabled;
         }
+        // Display the text when the powerup is in effect and change its colour over time
         if (displayText.enabled)
         {
             float sanitizedTime = Mathf.Floor(Powerup.remainingDuration * 10) / 10f;

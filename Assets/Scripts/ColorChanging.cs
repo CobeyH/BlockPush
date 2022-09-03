@@ -17,12 +17,19 @@ public class ColorChanging : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody>();
         baseKinematic = rb.isKinematic;
     }
-    // Update is called once per frame
     void Update()
     {
+        UpdateColor();
+    }
+
+    // Updates the color of the game object based on the state of the powerup.
+    void UpdateColor()
+    {
+        // When the powerup is on. The color changes to the player's color. Then slowly reverts back to it's original color.
         if (Powerup.isPowerOn())
         {
             rend.material.color = Powerup.LerpColor(baseColor);
+            // All objects should be moveable when powerup is enabled. Therefore the kinematic is disabled.
             rb.isKinematic = false;
             powerModeSwitched = true;
         }

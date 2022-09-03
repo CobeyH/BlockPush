@@ -14,7 +14,6 @@ public class Powerup : MonoBehaviour
         playerColor = gameObject.GetComponent<Renderer>().material.color;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (remainingDuration > 0)
@@ -28,21 +27,22 @@ public class Powerup : MonoBehaviour
     {
         return remainingDuration > 0;
     }
+
+    // Detect when player picks up a power up
     void OnTriggerEnter(Collider collider)
     {
         // If the player collides with a powerup.
         if (collider.gameObject.CompareTag("Powerup"))
         {
             remainingDuration = powerDuration;
-            Debug.Log(remainingDuration + " Other: " + powerDuration);
             Destroy(collider.gameObject);
         }
     }
 
-    // Returns the color the object should be given the current state of the powerup.
+    // Returns the color the object should be given the current state of the powerup
     public static Color LerpColor(Color endColor)
     {
-        // If there is no powerup on, then return the objects own colour.
+        // If there is no powerup on, then return the objects own colour
         if (remainingDuration <= 0)
         {
             return endColor;
