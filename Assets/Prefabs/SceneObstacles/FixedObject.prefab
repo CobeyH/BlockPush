@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1067886066415053034}
   - component: {fileID: 1067886066415053035}
   - component: {fileID: 8852641076285638521}
+  - component: {fileID: -1305415249691826416}
   m_Layer: 6
   m_Name: FixedObject
   m_TagString: Untagged
@@ -110,3 +111,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afb89b633c89631e882fbb90195f7593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &-1305415249691826416
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067886066415053032}
+  serializedVersion: 2
+  m_Mass: 0.1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
