@@ -32,7 +32,7 @@ public class GameController : MonoBehaviour
     }
     void HandleGameOver(GameObject menuObject)
     {
-        if (!isGameOver)
+        if (!isGameOver && menuObject != null)
         {
             isGameOver = true;
             menuObject.GetComponent<MenuController>().ShowMenu();
