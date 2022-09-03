@@ -32,7 +32,8 @@ public class ChunkSpawner : MonoBehaviour
                 position = BuildTile(checkpoint, position);
             }
         }
-        Instantiate(endChunk, position, Quaternion.identity);
+        // Add the end chunk with the goal.
+        BuildTile(endChunk, position);
     }
 
     // Take a prefab and update the position so that they generate connected in a straight line.

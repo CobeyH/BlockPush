@@ -10,8 +10,7 @@ public class CameraMovement : MonoBehaviour
     [SerializeField]
     int startSpeed = 3;
     [SerializeField]
-    float trailingModifier = 0.3f;
-
+    float maxTrail = 15f;
     [SerializeField]
     GameObject player;
 
@@ -36,9 +35,12 @@ public class CameraMovement : MonoBehaviour
     // If the player is far ahead of the camera, the camera will speed up in order to catch up.
     float CalculatePositionOffset()
     {
-        float distanceFactor = DistanceToPlayer() * trailingModifier * Time.deltaTime;
-        float speedFactor = speedModifier * Time.deltaTime;
-        return Mathf.Max(distanceFactor, speedFactor);
+        float distToPlayer = DistanceToPlayer();
+        if (distToPlayer > maxTrail)
+        {
+            return distToPlayer - maxTrail;
+        }
+        return speedModifier * Time.deltaTime;
     }
 
     // Calculates the distance from the camera to the player along the Z-axis
