@@ -5,14 +5,22 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
 
-    public int speedModifier = 3;
+    public static int speedModifier = 3;
+
+    [SerializeField]
+    int startSpeed = 3;
     [SerializeField]
     float trailingModifier = 0.3f;
 
     [SerializeField]
     GameObject player;
 
-    // Update is called once per frame
+    void Start()
+    {
+        speedModifier = startSpeed;
+    }
+
+    // Move the camera based on either its speed or the distance to the player.
     void Update()
     {
         float offsetFactor = CalculatePositionOffset();
