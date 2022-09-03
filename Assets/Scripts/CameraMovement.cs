@@ -21,11 +21,15 @@ public class CameraMovement : MonoBehaviour
     }
 
     // Move the camera based on either its speed or the distance to the player.
-    void Update()
+    void LateUpdate()
     {
+        // Update camera position.
         float offsetFactor = CalculatePositionOffset();
         Vector3 positionOffset = new Vector3(0, 0, offsetFactor);
         gameObject.transform.position += positionOffset;
+        // Update Lookup Vector
+        Vector3 toLook = new Vector3(0, 0, player.transform.position.z + 5);
+        gameObject.transform.LookAt(toLook);
     }
 
     // Calculates how far the camera should move along the Z-Axis.
