@@ -780,6 +780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chunkPrefab: {fileID: 7022330060813220143, guid: 04db01d72bb0e5b0a88b77a4d717a908,
     type: 3}
+  endChunk: {fileID: 107341179258336726, guid: c57d6d4dd2a185dd494e47b79ed48a38, type: 3}
   levelSize: 2
 --- !u!1001 &1518202460
 PrefabInstance:
