@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     bool isGameOver = false;
-    public GameObject gameOverMenu;
+    public GameObject gameLostMenu;
+    public GameObject gameWonMenu;
     public GameObject pauseMenu;
 
     void Start()
@@ -29,14 +30,24 @@ public class GameController : MonoBehaviour
             }
         }
     }
-    public void GameOver()
+    void HandleGameOver(GameObject menuObject)
     {
         if (!isGameOver)
         {
             isGameOver = true;
-            gameOverMenu.GetComponent<MenuController>().ShowMenu();
+            menuObject.GetComponent<MenuController>().ShowMenu();
             SaveData();
         }
+    }
+
+    public void LoseGame()
+    {
+        HandleGameOver(gameLostMenu);
+    }
+
+    public void WinGame()
+    {
+        HandleGameOver(gameWonMenu);
     }
 
 
