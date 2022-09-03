@@ -18,9 +18,10 @@ GameObject:
   - component: {fileID: 3976171433334210602}
   - component: {fileID: 8576151467347062100}
   - component: {fileID: 1300440137564855520}
+  - component: {fileID: -7680278271771312865}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -230,4 +231,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30c13d9655523d46b14908a964b8312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerDuration: 10
+--- !u!114 &-7680278271771312865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4073859293752930507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c080d32fc269e7bb598be9e7b9f9c3fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathParticles: {fileID: 3736347687200612104, guid: 71cf998ac8c99bf84b839e6395a6af70,
+    type: 3}
+  particleMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}

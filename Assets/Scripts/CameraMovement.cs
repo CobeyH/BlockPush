@@ -22,6 +22,10 @@ public class CameraMovement : MonoBehaviour
     // Move the camera based on either its speed or the distance to the player.
     void LateUpdate()
     {
+        if (player == null)
+        {
+            return;
+        }
         // Update camera position.
         float offsetFactor = CalculatePositionOffset();
         Vector3 positionOffset = new Vector3(0, 0, offsetFactor);

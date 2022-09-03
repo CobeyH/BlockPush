@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.IO;
+using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
@@ -40,9 +41,20 @@ public class GameController : MonoBehaviour
         if (!isGameOver && menuObject != null)
         {
             isGameOver = true;
-            menuObject.GetComponent<MenuController>().ShowMenu();
             SaveData();
+            StartCoroutine(EndGameSlow(menuObject));
         }
+    }
+
+    IEnumerator EndGameSlow(GameObject menuObject)
+    {
+        for (float speed = 1; speed > 0; speed -= 0.1f)
+        {
+            Time.timeScale = speed;
+            yield return new WaitForSecondsRealtime(0.1f);
+        }
+
+        menuObject.GetComponent<MenuController>().ShowMenu();
     }
 
     public void LoseGame()
