@@ -6,9 +6,27 @@ public class DeathEffect : MonoBehaviour
     GameObject deathParticles;
     [SerializeField]
     Mesh particleMesh;
+    GameController gc;
 
-    void OnDestroy()
+    void Start()
     {
+        gc = FindObjectOfType<GameController>();
+    }
+    void Update()
+    {
+        if (gameObject.transform.position.y < -1)
+        {
+            DestroyWithEffect();
+        }
+    }
+
+    public void DestroyWithEffect()
+    {
+        if (gameObject.CompareTag("Player"))
+        {
+            gc.LoseGame();
+        }
+        Destroy(gameObject);
         GameObject particles = Instantiate(deathParticles, gameObject.transform.position, Quaternion.identity);
         // TODO: This will have horrible performance. Rework this to be more efficient.
         // I'm worrying more about getting features done first, then optimization later.

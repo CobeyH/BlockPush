@@ -3,26 +3,21 @@ using UnityEngine;
 public class DeathDetection : MonoBehaviour
 {
     GameController gc;
+    DeathEffect death;
     void Start()
     {
         gc = FindObjectOfType<GameController>();
+        death = gameObject.GetComponent<DeathEffect>();
     }
 
     // Check if the player has gone out of bounds
-    void Update()
-    {
-        if (gameObject.transform.position.y < -1)
-        {
-            gc.LoseGame();
-        }
-    }
 
     // Detection for Gameover conditions
     void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("Hazard") && !Powerup.isPowerOn())
         {
-            gc.LoseGame();
+            death.DestroyWithEffect();
         }
         else if (collider.CompareTag("FinishLine"))
         {
