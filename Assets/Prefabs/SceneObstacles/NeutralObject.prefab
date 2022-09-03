@@ -82,10 +82,5 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 0.1
       objectReference: {fileID: 0}
-    - target: {fileID: 8357171162910929761, guid: e8617cbcebf725c93b2400aac32536e9,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8617cbcebf725c93b2400aac32536e9, type: 3}

@@ -17,7 +17,7 @@ public class DeathDetection : MonoBehaviour
         }
     }
 
-    // Detection for Hazard Blocks
+    // Detection for Gameover conditions
     void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("Hazard") && !Powerup.isPowerOn())

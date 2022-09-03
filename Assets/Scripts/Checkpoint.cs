@@ -2,8 +2,13 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    void OnTriggerEnter()
+    // Detection for collision with a player
+    void OnTriggerEnter(Collider collider)
     {
-        CameraMovement.speedModifier += 1;
+        // Make sure it collided with the player
+        if (collider.gameObject.layer == 8)
+        {
+            CameraMovement.speedModifier += 1;
+        }
     }
 }
