@@ -18,7 +18,6 @@ public class Powerup : MonoBehaviour
         if (remainingDuration > 0)
         {
             remainingDuration = Mathf.Max(remainingDuration - Time.deltaTime, 0f);
-            Debug.Log(remainingDuration);
         }
 
     }
