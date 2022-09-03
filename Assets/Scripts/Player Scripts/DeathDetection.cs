@@ -13,14 +13,14 @@ public class DeathDetection : MonoBehaviour
     {
         if (gameObject.transform.position.y < -1)
         {
-            gc.GameOver();
+            gc.LoseGame();
         }
     }
 
     // When the player falls behind too much, destroy them
     void OnBecameInvisible()
     {
-        gc.GameOver();
+        gc.LoseGame();
     }
 
     // Detection for Hazard Blocks
@@ -28,7 +28,11 @@ public class DeathDetection : MonoBehaviour
     {
         if (collider.CompareTag("Hazard"))
         {
-            gc.GameOver();
+            gc.LoseGame();
+        }
+        else if (collider.CompareTag("FinishLine"))
+        {
+            gc.WinGame();
         }
     }
 }
