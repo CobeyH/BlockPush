@@ -17,16 +17,10 @@ public class DeathDetection : MonoBehaviour
         }
     }
 
-    // When the player falls behind too much, destroy them
-    void OnBecameInvisible()
-    {
-        gc.LoseGame();
-    }
-
     // Detection for Hazard Blocks
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.CompareTag("Hazard"))
+        if (collider.CompareTag("Hazard") && !Powerup.isPowerOn())
         {
             gc.LoseGame();
         }
