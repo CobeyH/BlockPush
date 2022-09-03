@@ -5,10 +5,11 @@ public class PowerupDisplay : MonoBehaviour
 {
     [SerializeField]
     TMP_Text displayText;
+    Color baseColor;
     // Start is called before the first frame update
     void Start()
     {
-
+        baseColor = displayText.color;
     }
 
     // Update is called once per frame
@@ -23,6 +24,7 @@ public class PowerupDisplay : MonoBehaviour
         {
             float sanitizedTime = Mathf.Floor(Powerup.remainingDuration * 10) / 10f;
             displayText.text = sanitizedTime.ToString();
+            displayText.color = Powerup.LerpColor(baseColor);
         }
 
 
