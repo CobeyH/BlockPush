@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1067886066415053035}
   - component: {fileID: 8852641076285638521}
   - component: {fileID: -1305415249691826416}
+  - component: {fileID: -4282719788618502425}
   m_Layer: 6
   m_Name: FixedObject
   m_TagString: Untagged
@@ -127,3 +128,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-4282719788618502425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067886066415053032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c080d32fc269e7bb598be9e7b9f9c3fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathParticles: {fileID: 3736347687200612104, guid: 71cf998ac8c99bf84b839e6395a6af70,
+    type: 3}
+  particleMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
