@@ -245,4 +245,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathParticles: {fileID: 3736347687200612104, guid: 71cf998ac8c99bf84b839e6395a6af70,
     type: 3}
-  particleMesh: {fileID: 0}
+  particleMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
