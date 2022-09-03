@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class MovementController : MonoBehaviour
 {
     public float drivingForce = 1000f;
     public float steeringForce = 500f;
