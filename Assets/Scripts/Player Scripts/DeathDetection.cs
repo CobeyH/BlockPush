@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FallDetector : MonoBehaviour
+public class DeathDetection : MonoBehaviour
 {
     GameController gc;
     void Start()
@@ -21,5 +21,14 @@ public class FallDetector : MonoBehaviour
     void OnBecameInvisible()
     {
         gc.GameOver();
+    }
+
+    // Detection for Hazard Blocks
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.CompareTag("Hazard"))
+        {
+            gc.GameOver();
+        }
     }
 }

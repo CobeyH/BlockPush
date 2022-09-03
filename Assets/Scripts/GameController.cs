@@ -39,6 +39,8 @@ public class GameController : MonoBehaviour
         }
     }
 
+
+    // Export data to JSON format.
     void SaveData()
     {
         JSONData data = new JSONData

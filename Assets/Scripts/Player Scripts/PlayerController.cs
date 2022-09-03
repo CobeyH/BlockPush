@@ -9,16 +9,6 @@ public class PlayerController : MonoBehaviour
     Rigidbody rigidBody;
     Vector2 moveDirection = Vector2.zero;
 
-    void OnEnable()
-    {
-        movementControls.Enable();
-    }
-
-    void OnDisable()
-    {
-        movementControls.Disable();
-    }
-
     void Start()
     {
         rigidBody = gameObject.GetComponent<Rigidbody>();
@@ -35,5 +25,16 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         rigidBody.AddForce(moveDirection.x * steeringForce, 0, moveDirection.y * drivingForce);
+    }
+
+    // Set up player controls
+    void OnEnable()
+    {
+        movementControls.Enable();
+    }
+
+    void OnDisable()
+    {
+        movementControls.Disable();
     }
 }
