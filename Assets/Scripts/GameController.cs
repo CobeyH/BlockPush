@@ -8,6 +8,11 @@ public class GameController : MonoBehaviour
     bool isGameOver = false;
     public GameObject gameOverMenu;
     public GameObject pauseMenu;
+
+    void Start()
+    {
+        Time.timeScale = 1f;
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -53,6 +58,7 @@ public class GameController : MonoBehaviour
         int levelIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(levelIndex);
     }
+
     private class JSONData
     {
         public int timePlayed = 0;

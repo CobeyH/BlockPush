@@ -15,4 +15,20 @@ public class HazardDetection : MonoBehaviour
             gameController.GameOver();
         }
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == 7)
+        {
+            collision.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+        }
+    }
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.layer == 7)
+        {
+            collision.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+        }
+    }
+
 }
