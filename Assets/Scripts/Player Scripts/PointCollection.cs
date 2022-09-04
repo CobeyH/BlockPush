@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class PointCollection : MonoBehaviour
 {
+    AudioManager audioManager;
+    void Start()
+    {
+        audioManager = FindObjectOfType<AudioManager>();
+    }
     // Detection for player collecting a point
     void OnTriggerEnter(Collider collider)
     {
@@ -9,6 +14,7 @@ public class PointCollection : MonoBehaviour
         {
             ScoreManager.score++;
             Destroy(collider.gameObject);
+            audioManager.Play("Coin Pickup");
         }
     }
 }
