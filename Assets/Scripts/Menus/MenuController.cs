@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class MenuController : MonoBehaviour
 {
     public GameObject MenuUI;
@@ -17,8 +18,8 @@ public class MenuController : MonoBehaviour
     }
     public void HideMenu()
     {
-        MenuUI.SetActive(false);
         Time.timeScale = 1f;
+        MenuUI.SetActive(false);
     }
 
     public void RestartLevel()

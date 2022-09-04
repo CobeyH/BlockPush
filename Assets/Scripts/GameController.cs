@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering;
 
 public class GameController : MonoBehaviour
 {
@@ -10,10 +11,12 @@ public class GameController : MonoBehaviour
     public GameObject gameLostMenu;
     public GameObject gameWonMenu;
     public GameObject pauseMenu;
+    public GameObject dofVolume;
 
     void Start()
     {
         Time.timeScale = 1f;
+        dofVolume.SetActive(false);
     }
     void Update()
     {
@@ -29,10 +32,12 @@ public class GameController : MonoBehaviour
             if (isGamePaused)
             {
                 menuController.HideMenu();
+                DisableDOF();
             }
             else
             {
                 menuController.ShowMenu();
+                EnableDOF();
             }
         }
     }
@@ -54,6 +59,7 @@ public class GameController : MonoBehaviour
             yield return new WaitForSecondsRealtime(0.1f);
         }
 
+        EnableDOF();
         menuObject.GetComponent<MenuController>().ShowMenu();
     }
 
@@ -80,6 +86,15 @@ public class GameController : MonoBehaviour
         string json = JsonUtility.ToJson(data);
         File.WriteAllText(Application.dataPath + "/pushyBlock-Data.json", json);
 
+    }
+
+    public void EnableDOF()
+    {
+        dofVolume.SetActive(true);
+    }
+    public void DisableDOF()
+    {
+        dofVolume.SetActive(false);
     }
 
     public void RestartLevel()
