@@ -1,2 +1,4 @@
 Credit for sound assets
-Coin Pickup - https://opengameart.org/content/completion-sound
+completion sound - https://opengameart.org/content/completion-sound
+glass_break - https://opengameart.org/content/glass-break
+awake10_megawall - https://opengameart.org/content/awake-megawall-10

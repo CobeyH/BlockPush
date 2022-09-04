@@ -60,7 +60,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void Pause(string name)
+    public void Stop(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s != null)
