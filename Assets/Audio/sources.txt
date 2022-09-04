@@ -2,3 +2,4 @@ Credit for sound assets
 completion sound - https://opengameart.org/content/completion-sound
 glass_break - https://opengameart.org/content/glass-break
 awake10_megawall - https://opengameart.org/content/awake-megawall-10
+powerup 10 - https://opengameart.org/content/sound-effects-pack-2

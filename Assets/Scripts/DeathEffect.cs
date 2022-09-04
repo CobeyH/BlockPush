@@ -27,8 +27,8 @@ public class DeathEffect : MonoBehaviour
         if (gameObject.CompareTag("Player"))
         {
             gc.LoseGame();
-            audioManager.Play("Destroy");
         }
+        audioManager.Play("Destroy");
         Destroy(gameObject);
         GameObject particles = Instantiate(deathParticles, gameObject.transform.position, Quaternion.identity);
         // TODO: This will have horrible performance. Rework this to be more efficient.
