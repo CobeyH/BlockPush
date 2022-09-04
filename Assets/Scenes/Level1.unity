@@ -1124,26 +1124,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4264314758127828360, guid: e5c7b07c153d4de4198a687976c12f0d,
         type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4264314758127828360, guid: e5c7b07c153d4de4198a687976c12f0d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4264314758127828360, guid: e5c7b07c153d4de4198a687976c12f0d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4264314758127828360, guid: e5c7b07c153d4de4198a687976c12f0d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4264314758127828360, guid: e5c7b07c153d4de4198a687976c12f0d,
-        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
@@ -1807,26 +1787,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 2.545
-      objectReference: {fileID: 0}
-    - target: {fileID: 4264314758127828360, guid: b12903b7ce35344d3b5019e4635348a6,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4264314758127828360, guid: b12903b7ce35344d3b5019e4635348a6,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4264314758127828360, guid: b12903b7ce35344d3b5019e4635348a6,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4264314758127828360, guid: b12903b7ce35344d3b5019e4635348a6,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4264314758127828360, guid: b12903b7ce35344d3b5019e4635348a6,
         type: 3}
