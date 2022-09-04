@@ -169,6 +169,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MenuUI: {fileID: 8034540629539939300}
+  dofVolume: {fileID: 8861024256854322124, guid: afa3cf1878f16d74ea59e64e183abadc,
+    type: 3}
 --- !u!1001 &3232493714328015605
 PrefabInstance:
   m_ObjectHideFlags: 0
