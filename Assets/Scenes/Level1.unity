@@ -1198,6 +1198,12 @@ MonoBehaviour:
     pitch: 1.25
     loop: 0
     source: {fileID: 0}
+  - name: Victory
+    clip: {fileID: 8300000, guid: af6eb074a5d82fb55a8f096df94ce75f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   mainMixer: {fileID: 24300002, guid: 726b9ec92d790d75d845f612c000fa90, type: 2}
 --- !u!4 &1129001761
 Transform:

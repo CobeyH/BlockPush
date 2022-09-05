@@ -3,7 +3,6 @@ using System;
 using System.IO;
 using System.Collections;
 using UnityEngine.SceneManagement;
-using UnityEngine.Rendering;
 
 public class GameController : MonoBehaviour
 {
@@ -75,6 +74,7 @@ public class GameController : MonoBehaviour
     public void WinGame()
     {
         HandleGameOver(gameWonMenu);
+        audioManager.Play("Victory");
     }
 
 
