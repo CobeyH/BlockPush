@@ -33,22 +33,21 @@ public class ChunkSpawner : MonoBehaviour
     // Take a prefab and update the position so that they generate connected in a straight line.
     void BuildTile(Texture2D map, Vector3 position)
     {
-        // Build ground
+        // Build ground from the center
         GameObject groundTile = Instantiate(chunkPrefab, position, Quaternion.identity);
         groundTile.transform.localScale = new Vector3(map.width, 0.5f, map.height);
+
+        // Set origin to the bottom left
+        position += new Vector3(-map.width / 2, 0.75f, -map.height / 2);
         for (int x = 0; x < map.width; x++)
         {
-            for (int y = 0; y < map.height; y++)
+            for (int z = 0; z < map.height; z++)
             {
-                Color pixel = map.GetPixel(x, y);
-                GenerateObject(pixel, position);
+                Color pixel = map.GetPixel(x, z);
+                Vector3 objPosition = new Vector3(position.x + x, position.y, position.z + z);
+                GenerateObject(pixel, objPosition);
             }
         }
-        // float tileLength = tile.transform.localScale.z;
-        // origin.z += tileLength / 2f;
-        // Instantiate(tile, origin, Quaternion.identity);
-        // origin.z += tileLength / 2f;
-        // return origin;
     }
 
     void GenerateObject(Color pixel, Vector3 drawPosition)
@@ -62,6 +61,8 @@ public class ChunkSpawner : MonoBehaviour
         {
             if (colorMapping.color == pixel)
             {
+                // Draw from the center of the 1 x 1 unit instead of the bottom left corner.
+                drawPosition += new Vector3(0.5f, 0, 0.5f);
                 Instantiate(colorMapping.prefab, drawPosition, Quaternion.identity);
             }
         }
