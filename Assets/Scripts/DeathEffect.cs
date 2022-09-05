@@ -7,10 +7,12 @@ public class DeathEffect : MonoBehaviour
     [SerializeField]
     Mesh particleMesh;
     GameController gc;
+    AudioManager audioManager;
 
     void Start()
     {
         gc = FindObjectOfType<GameController>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
     void Update()
     {
@@ -26,6 +28,7 @@ public class DeathEffect : MonoBehaviour
         {
             gc.LoseGame();
         }
+        audioManager.Play("Destroy");
         Destroy(gameObject);
         GameObject particles = Instantiate(deathParticles, gameObject.transform.position, Quaternion.identity);
         // TODO: This will have horrible performance. Rework this to be more efficient.

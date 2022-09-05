@@ -3,7 +3,6 @@ using System;
 using System.IO;
 using System.Collections;
 using UnityEngine.SceneManagement;
-using UnityEngine.Rendering;
 
 public class GameController : MonoBehaviour
 {
@@ -12,11 +11,14 @@ public class GameController : MonoBehaviour
     public GameObject gameWonMenu;
     public GameObject pauseMenu;
     public GameObject dofVolume;
+    AudioManager audioManager;
 
     void Start()
     {
         Time.timeScale = 1f;
         dofVolume.SetActive(false);
+        audioManager = FindObjectOfType<AudioManager>();
+        audioManager.Play("Music");
     }
     void Update()
     {
@@ -47,6 +49,7 @@ public class GameController : MonoBehaviour
         {
             isGameOver = true;
             SaveData();
+            audioManager.Stop("Music");
             StartCoroutine(EndGameSlow(menuObject));
         }
     }
@@ -71,6 +74,7 @@ public class GameController : MonoBehaviour
     public void WinGame()
     {
         HandleGameOver(gameWonMenu);
+        audioManager.Play("Victory");
     }
 
 

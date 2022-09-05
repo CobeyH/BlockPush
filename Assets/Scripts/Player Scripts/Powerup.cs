@@ -5,13 +5,14 @@ public class Powerup : MonoBehaviour
     [HideInInspector]
     public static float remainingDuration;
     public static float powerDuration = 10;
-
+    AudioManager audioManager;
     public static Color playerColor;
     // Start is called before the first frame update
     void Start()
     {
         remainingDuration = 0;
         playerColor = gameObject.GetComponent<Renderer>().material.color;
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     void Update()
@@ -35,6 +36,7 @@ public class Powerup : MonoBehaviour
         if (collider.gameObject.CompareTag("Powerup"))
         {
             remainingDuration = powerDuration;
+            audioManager.Play("Power Up");
             Destroy(collider.gameObject);
         }
     }
