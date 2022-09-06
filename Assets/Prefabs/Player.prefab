@@ -113,7 +113,7 @@ Rigidbody:
   m_GameObject: {fileID: 4073859293752930507}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 0.1
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -132,8 +132,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a542795ac5474b65bfdc3bd7bb84e34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drivingForce: 10
-  steeringForce: 5
+  drivingForce: 100
+  steeringForce: 50
+  maxSpeed: 15
   movementControls:
     m_Name: Movement Controls
     m_Type: 0
@@ -183,6 +184,39 @@ MonoBehaviour:
       m_Action: Movement Controls
       m_Flags: 8
     m_Flags: 0
+  accelerationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -1.9998672
+      value: -1.0024596
+      inSlope: 1.1724335
+      outSlope: 1.1724335
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.10534747
+    - serializedVersion: 3
+      time: 0.008441748
+      value: 0.0029697418
+      inSlope: 0.034902945
+      outSlope: 0.034902945
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.13977067
+      outWeight: 0.1310047
+    - serializedVersion: 3
+      time: 2
+      value: 1
+      inSlope: 0.885523
+      outSlope: 0.885523
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.1483256
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &-6740401518408820608
 MonoBehaviour:
   m_ObjectHideFlags: 0

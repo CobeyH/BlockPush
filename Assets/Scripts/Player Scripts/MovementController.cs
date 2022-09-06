@@ -8,9 +8,14 @@ public class MovementController : MonoBehaviour
 
     [SerializeField]
     float steeringForce = 500f;
+    [SerializeField]
+    float maxSpeed = 5f;
 
     [SerializeField]
     InputAction movementControls;
+
+    [SerializeField]
+    AnimationCurve accelerationCurve;
     Rigidbody rigidBody;
     Vector2 moveDirection = Vector2.zero;
 
@@ -29,7 +34,14 @@ public class MovementController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rigidBody.AddForce(moveDirection.x * steeringForce, 0, moveDirection.y * drivingForce);
+        float xAcceleration = GetAccelerationProportion(moveDirection.x - rigidBody.velocity.x / maxSpeed);
+        float zAcceleration = GetAccelerationProportion(moveDirection.y - rigidBody.velocity.z / maxSpeed);
+        rigidBody.AddForce(xAcceleration * steeringForce, 0, zAcceleration * drivingForce);
+    }
+
+    float GetAccelerationProportion(float error)
+    {
+        return accelerationCurve.Evaluate(error);
     }
 
     // Set up player controls
