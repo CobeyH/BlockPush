@@ -8,9 +8,6 @@ public class ChunkSpawner : MonoBehaviour
     GameObject chunkPrefab;
 
     [SerializeField]
-    GameObject endChunk;
-
-    [SerializeField]
     Texture2D[] maps;
     [SerializeField]
     ColorToPrefab[] colorMappings;
