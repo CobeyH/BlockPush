@@ -1196,6 +1196,9 @@ MonoBehaviour:
   - color: {r: 0.20392157, g: 0.12156863, b: 0.5921569, a: 1}
     prefab: {fileID: 4264314758127828364, guid: e5c7b07c153d4de4198a687976c12f0d,
       type: 3}
+  - color: {r: 0.0627451, g: 0.6745098, b: 0.5176471, a: 1}
+    prefab: {fileID: 4900793996027320259, guid: 8649cb9559337002385648eb758c2902,
+      type: 3}
 --- !u!1 &1960203261
 GameObject:
   m_ObjectHideFlags: 0
