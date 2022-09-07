@@ -108,6 +108,11 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(levelIndex);
     }
 
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("LevelSelection");
+    }
+
     private class JSONData
     {
         public int timePlayed = 0;
