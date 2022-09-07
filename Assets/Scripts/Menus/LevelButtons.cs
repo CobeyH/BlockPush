@@ -11,7 +11,6 @@ public class LevelButtons : MonoBehaviour
     {
         int levelCount = gameController.GetComponent<ChunkSpawner>().GetLevelCount();
         int furthestLevel = PlayerPrefs.GetInt("progress", 0);
-        Debug.Log(furthestLevel);
 
         for (int levelIndex = 0; levelIndex < levelCount; levelIndex++)
         {

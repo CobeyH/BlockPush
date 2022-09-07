@@ -78,9 +78,9 @@ MonoBehaviour:
   chunkPrefab: {fileID: 7022330060813220143, guid: 04db01d72bb0e5b0a88b77a4d717a908,
     type: 3}
   maps:
-  - {fileID: 2800000, guid: 557d62c09389ab5c8a05ab839f26ef4f, type: 3}
-  - {fileID: 2800000, guid: a42647d10f24ce3e98d05fe98cd11c5f, type: 3}
-  - {fileID: 2800000, guid: a42647d10f24ce3e98d05fe98cd11c5f, type: 3}
+  - tileMaps: []
+  - tileMaps: []
+  - tileMaps: []
   colorMappings:
   - color: {r: 0.5137255, g: 0.58431375, b: 0.654902, a: 1}
     prefab: {fileID: 1067886066415053032, guid: 3176ecb308331137d9a7de51083867c4,
