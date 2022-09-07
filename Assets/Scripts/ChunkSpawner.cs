@@ -8,7 +8,8 @@ public class ChunkSpawner : MonoBehaviour
     GameObject chunkPrefab;
 
     [SerializeField]
-    Texture2D[] maps;
+
+    TileMapList[] maps;
     [SerializeField]
     ColorToPrefab[] colorMappings;
 
@@ -17,13 +18,15 @@ public class ChunkSpawner : MonoBehaviour
     void Start()
     {
         Vector3 position = new Vector3(0, -0.75f, 0);
+        int levelIndex = ApplicationData.currentLevel;
+        Texture2D[] mapTiles = maps[levelIndex].tileMaps;
         // Build a chunk for each map in the array
-        for (int i = 0; i < maps.Length; i++)
+        for (int i = 0; i < mapTiles.Length; i++)
         {
             // The build position will be set to the center of the tile.
-            position += new Vector3(0, 0, maps[i].height / 2);
-            BuildTile(maps[i], position);
-            position += new Vector3(0, 0, maps[i].height / 2);
+            position += new Vector3(0, 0, mapTiles[i].height / 2);
+            BuildTile(mapTiles[i], position);
+            position += new Vector3(0, 0, mapTiles[i].height / 2);
         }
     }
 
@@ -65,4 +68,17 @@ public class ChunkSpawner : MonoBehaviour
         }
 
     }
+
+    public int GetLevelCount()
+    {
+        return maps.Length;
+    }
+
+    // A wrapper class is needed because Unity doesn't support arrays within arrays in the editor.
+    [System.Serializable]
+    public class TileMapList
+    {
+        public Texture2D[] tileMaps;
+    }
+
 }
