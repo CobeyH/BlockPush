@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class LevelButtons : MonoBehaviour
 {
@@ -15,7 +14,8 @@ public class LevelButtons : MonoBehaviour
         for (int levelIndex = 0; levelIndex < levelCount; levelIndex++)
         {
             GameObject buttonObject = Instantiate(buttonPrefab, gameObject.transform);
-            LockControl control = buttonObject.GetComponent<LockControl>();
+            ButtonControl control = buttonObject.GetComponent<ButtonControl>();
+            control.setIndex(levelIndex);
             if (levelIndex > furthestLevel)
             {
                 control.lockButton();
@@ -28,9 +28,4 @@ public class LevelButtons : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
