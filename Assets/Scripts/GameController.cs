@@ -113,6 +113,18 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(levelIndex);
     }
 
+    public void LoadNextLevel()
+    {
+        if (ApplicationData.currentLevel >= SceneManager.GetActiveScene().buildIndex)
+        {
+            LoadMenu();
+        }
+        else
+        {
+            ApplicationData.currentLevel++;
+            RestartLevel();
+        }
+    }
     public void LoadMenu()
     {
         SceneManager.LoadScene("LevelSelection");
