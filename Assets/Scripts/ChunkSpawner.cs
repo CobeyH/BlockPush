@@ -64,8 +64,10 @@ public class ChunkSpawner : MonoBehaviour
                 // Draw from the center of the 1 x 1 unit instead of the bottom left corner.
                 drawPosition += new Vector3(0.5f, 0, 0.5f);
                 Instantiate(colorMapping.prefab, drawPosition, colorMapping.prefab.transform.rotation);
+                return;
             }
         }
+        Debug.LogWarning("Didn't find matching color for: " + pixel);
 
     }
 

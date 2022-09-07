@@ -4,7 +4,7 @@ public class Powerup : MonoBehaviour
 {
     [HideInInspector]
     public static float remainingDuration;
-    public static float powerDuration = 10;
+    public static float powerDuration = 5;
     AudioManager audioManager;
     public static Color playerColor;
     // Start is called before the first frame update
