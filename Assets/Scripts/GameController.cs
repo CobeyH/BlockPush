@@ -75,6 +75,11 @@ public class GameController : MonoBehaviour
     {
         HandleGameOver(gameWonMenu);
         audioManager.Play("Victory");
+        int furthestLevel = PlayerPrefs.GetInt("progress");
+        if (ApplicationData.currentLevel == furthestLevel)
+        {
+            PlayerPrefs.SetInt("progress", furthestLevel + 1);
+        }
     }
 
 
