@@ -91,7 +91,12 @@ PrefabInstance:
     - target: {fileID: 2833200909212947262, guid: e8617cbcebf725c93b2400aac32536e9,
         type: 3}
       propertyPath: m_Name
-      value: PositiveShape
+      value: PositivePyramid
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357171162910929761, guid: e8617cbcebf725c93b2400aac32536e9,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.05
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2833200909212947261, guid: e8617cbcebf725c93b2400aac32536e9, type: 3}
