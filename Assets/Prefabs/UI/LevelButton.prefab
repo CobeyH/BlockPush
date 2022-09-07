@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9044534772888768922}
   - component: {fileID: 2895195653077043304}
   - component: {fileID: 3464998766899550556}
+  - component: {fileID: 6380800383032323498}
   m_Layer: 5
   m_Name: LevelButton
   m_TagString: Untagged
@@ -123,6 +124,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6380800383032323498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6280273913793333009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd6d53235e7487675bc08a26dc30ac2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockIcon: {fileID: 4528100533733089750}
+  button: {fileID: 3464998766899550556}
 --- !u!1 &7977436610754769698
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,9 +390,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: lock-solid
       objectReference: {fileID: 0}
+    - target: {fileID: 5567868813287497981, guid: 248a253af62bf8fafba0d9c6bf1c5c6b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 7243324766535440047, guid: 248a253af62bf8fafba0d9c6bf1c5c6b,
     type: 3}
+--- !u!1 &4528100533733089750 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5567868813287497981, guid: 248a253af62bf8fafba0d9c6bf1c5c6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8327719066291716395}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8800360591277962768 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: -8524424544509167813, guid: 248a253af62bf8fafba0d9c6bf1c5c6b,

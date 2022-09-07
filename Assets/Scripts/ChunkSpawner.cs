@@ -65,4 +65,9 @@ public class ChunkSpawner : MonoBehaviour
         }
 
     }
+
+    public int GetLevelCount()
+    {
+        return maps.Length;
+    }
 }
