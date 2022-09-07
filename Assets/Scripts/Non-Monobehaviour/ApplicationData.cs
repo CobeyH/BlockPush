@@ -2,5 +2,5 @@ using UnityEngine;
 
 public class ApplicationData
 {
-    public static int currentLevel;
+    public static int currentLevel = 0;
 }
