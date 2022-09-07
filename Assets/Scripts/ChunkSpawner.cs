@@ -21,7 +21,7 @@ public class ChunkSpawner : MonoBehaviour
         int levelIndex = ApplicationData.currentLevel;
         Texture2D[] mapTiles = maps[levelIndex].tileMaps;
         // Build a chunk for each map in the array
-        for (int i = 0; i < maps.Length; i++)
+        for (int i = 0; i < mapTiles.Length; i++)
         {
             // The build position will be set to the center of the tile.
             position += new Vector3(0, 0, mapTiles[i].height / 2);
