@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lockIcon: {fileID: 4528100533733089750}
   button: {fileID: 3464998766899550556}
+  textDisplay: {fileID: 3458361079125956445}
 --- !u!1 &7977436610754769698
 GameObject:
   m_ObjectHideFlags: 0

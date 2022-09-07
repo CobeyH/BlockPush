@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class ButtonControl : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class ButtonControl : MonoBehaviour
     GameObject lockIcon;
     [SerializeField]
     Button button;
+    [SerializeField]
+    TMP_Text textDisplay;
 
     int index;
 
@@ -25,6 +28,7 @@ public class ButtonControl : MonoBehaviour
     public void setIndex(int buttonIndex)
     {
         index = buttonIndex;
+        textDisplay.text = (buttonIndex + 1).ToString();
     }
 
     public void StartLevel()

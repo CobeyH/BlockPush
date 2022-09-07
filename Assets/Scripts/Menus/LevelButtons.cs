@@ -22,7 +22,6 @@ public class LevelButtons : MonoBehaviour
             }
             else
             {
-
                 control.unlockButton();
             }
         }
