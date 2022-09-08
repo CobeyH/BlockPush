@@ -115,7 +115,8 @@ public class GameController : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        if (ApplicationData.currentLevel >= SceneManager.GetActiveScene().buildIndex)
+        int levelCount = GetComponent<ChunkSpawner>().GetLevelCount();
+        if (ApplicationData.currentLevel >= levelCount - 1)
         {
             LoadMenu();
         }
