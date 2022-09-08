@@ -101,5 +101,13 @@ public class AudioManager : MonoBehaviour
         mainMixer.audioMixer.SetFloat("Volume", newVolume);
     }
 
+    // A separate function is needed because I don't want to overwrite the playerpref value
+    // if the mute button is used. This should be reworked to remove code duplication.
+    public void DisableSound()
+    {
+        float newVolume = Mathf.Log(0.001f) * 20;
+        mainMixer.audioMixer.SetFloat("Volume", newVolume);
+    }
+
 }
 

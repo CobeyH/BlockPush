@@ -37,7 +37,15 @@ public class VolumeControl : MonoBehaviour
     public void ToggleMute()
     {
         mute = !mute;
-        audioManager.SetVolume(mute ? 0.001f : 1f);
+        if (mute)
+        {
+            audioManager.DisableSound();
+        }
+        else
+        {
+            float restoredVolume = PlayerPrefs.GetFloat("Volume", 1f);
+            audioManager.SetVolume(restoredVolume);
+        }
         volumeSlider.interactable = !mute;
         ButtonIcon.sprite = mute ? PlayIcon : PauseIcon;
     }
