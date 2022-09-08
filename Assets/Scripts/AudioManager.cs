@@ -30,6 +30,8 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         AddAudioSources(sounds);
+        // Restore the volume from previous play session
+        SetVolume(PlayerPrefs.GetFloat("Volume", 1));
     }
 
     void AddAudioSources(Sound[] clips)
@@ -90,5 +92,14 @@ public class AudioManager : MonoBehaviour
             s.UnPause();
         }
     }
+
+    public void SetVolume(float newVolume)
+    {
+        PlayerPrefs.SetFloat("Volume", newVolume);
+        // Scale the volume so that it isn't on a logarithmic scale
+        newVolume = Mathf.Log(newVolume) * 20;
+        mainMixer.audioMixer.SetFloat("Volume", newVolume);
+    }
+
 }
 
