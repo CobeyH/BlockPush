@@ -54,4 +54,4 @@ This section contains an enumeration of the key features included. Most of these
 
 See the Github issues tagged with "Future Work" for future plans. There are many ways to improve the look and feel of the game if more time were invested.
 
-A special thanks to everyone at GainPlay involved with this assignment. I had fun building this project and look forward to continuing my work with Unity in the future.
+A special thanks to everyone at GainPlay involved with this assignment. I had fun building this project and look forward to continuing my work with Unity in the future. This project took roughly 15-20 hours to complete. I completed most of the main features on the first day and then slowly worked on enhancements and minor issues over the next few days.
